@@ -35,12 +35,17 @@
             this.ConnectButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ConnectionStatus = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TextMessage = new System.Windows.Forms.TextBox();
-            this.SendButton = new System.Windows.Forms.Button();
-            this.DisconnectButton = new System.Windows.Forms.Button();
-            this.ListOfServerUsers = new System.Windows.Forms.ListBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.Button2 = new System.Windows.Forms.Button();
+            this.Button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.NewGameButton = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 12);
+            this.label2.Location = new System.Drawing.Point(144, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 1;
@@ -71,7 +76,7 @@
             // 
             // PortNumber
             // 
-            this.PortNumber.Location = new System.Drawing.Point(155, 29);
+            this.PortNumber.Location = new System.Drawing.Point(147, 29);
             this.PortNumber.Name = "PortNumber";
             this.PortNumber.Size = new System.Drawing.Size(44, 20);
             this.PortNumber.TabIndex = 3;
@@ -79,7 +84,7 @@
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(207, 27);
+            this.ConnectButton.Location = new System.Drawing.Point(199, 27);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(38, 23);
             this.ConnectButton.TabIndex = 4;
@@ -90,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(265, 13);
+            this.label3.Location = new System.Drawing.Point(240, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 5;
@@ -98,77 +103,128 @@
             // 
             // ConnectionStatus
             // 
-            this.ConnectionStatus.Location = new System.Drawing.Point(268, 29);
+            this.ConnectionStatus.Location = new System.Drawing.Point(243, 29);
             this.ConnectionStatus.Name = "ConnectionStatus";
             this.ConnectionStatus.ReadOnly = true;
-            this.ConnectionStatus.Size = new System.Drawing.Size(130, 20);
+            this.ConnectionStatus.Size = new System.Drawing.Size(98, 20);
             this.ConnectionStatus.TabIndex = 6;
             this.ConnectionStatus.Text = "Not Connected";
             // 
-            // label4
+            // Button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Enter your text here";
+            this.Button1.Location = new System.Drawing.Point(16, 56);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(49, 47);
+            this.Button1.TabIndex = 7;
+            this.Button1.Text = "-";
+            this.Button1.UseVisualStyleBackColor = true;
             // 
-            // TextMessage
+            // Button2
             // 
-            this.TextMessage.Location = new System.Drawing.Point(19, 85);
-            this.TextMessage.Name = "TextMessage";
-            this.TextMessage.Size = new System.Drawing.Size(379, 20);
-            this.TextMessage.TabIndex = 8;
+            this.Button2.Location = new System.Drawing.Point(74, 56);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(49, 47);
+            this.Button2.TabIndex = 8;
+            this.Button2.Text = "-";
+            this.Button2.UseVisualStyleBackColor = true;
             // 
-            // SendButton
+            // Button3
             // 
-            this.SendButton.Location = new System.Drawing.Point(323, 111);
-            this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(75, 52);
-            this.SendButton.TabIndex = 9;
-            this.SendButton.Text = "SEND";
-            this.SendButton.UseVisualStyleBackColor = true;
-            this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
+            this.Button3.Location = new System.Drawing.Point(129, 56);
+            this.Button3.Name = "Button3";
+            this.Button3.Size = new System.Drawing.Size(49, 47);
+            this.Button3.TabIndex = 9;
+            this.Button3.Text = "-";
+            this.Button3.UseVisualStyleBackColor = true;
             // 
-            // DisconnectButton
+            // button4
             // 
-            this.DisconnectButton.Location = new System.Drawing.Point(228, 111);
-            this.DisconnectButton.Name = "DisconnectButton";
-            this.DisconnectButton.Size = new System.Drawing.Size(89, 52);
-            this.DisconnectButton.TabIndex = 10;
-            this.DisconnectButton.Text = "DISCONNECT";
-            this.DisconnectButton.UseVisualStyleBackColor = true;
-            this.DisconnectButton.Click += new System.EventHandler(this.DisconnectButton_Click);
+            this.button4.Location = new System.Drawing.Point(16, 109);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(49, 47);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "-";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // ListOfServerUsers
+            // button5
             // 
-            this.ListOfServerUsers.FormattingEnabled = true;
-            this.ListOfServerUsers.Location = new System.Drawing.Point(13, 129);
-            this.ListOfServerUsers.Name = "ListOfServerUsers";
-            this.ListOfServerUsers.Size = new System.Drawing.Size(198, 147);
-            this.ListOfServerUsers.TabIndex = 11;
+            this.button5.Location = new System.Drawing.Point(74, 109);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(49, 47);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "-";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // button6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "List of online users";
+            this.button6.Location = new System.Drawing.Point(129, 109);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(49, 47);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "-";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(16, 162);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(49, 47);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "-";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(74, 162);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(49, 47);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "-";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(129, 162);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(49, 47);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "-";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // NewGameButton
+            // 
+            this.NewGameButton.Location = new System.Drawing.Point(184, 56);
+            this.NewGameButton.Name = "NewGameButton";
+            this.NewGameButton.Size = new System.Drawing.Size(113, 47);
+            this.NewGameButton.TabIndex = 16;
+            this.NewGameButton.Text = "NEW GAME";
+            this.NewGameButton.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(184, 109);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(113, 47);
+            this.button11.TabIndex = 17;
+            this.button11.Text = "DISCONNECT";
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 283);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.ListOfServerUsers);
-            this.Controls.Add(this.DisconnectButton);
-            this.Controls.Add(this.SendButton);
-            this.Controls.Add(this.TextMessage);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(353, 215);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.NewGameButton);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Button3);
+            this.Controls.Add(this.Button2);
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.ConnectionStatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ConnectButton);
@@ -192,12 +248,17 @@
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ConnectionStatus;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TextMessage;
-        private System.Windows.Forms.Button SendButton;
-        private System.Windows.Forms.Button DisconnectButton;
-        private System.Windows.Forms.ListBox ListOfServerUsers;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Button1;
+        private System.Windows.Forms.Button Button2;
+        private System.Windows.Forms.Button Button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button NewGameButton;
+        private System.Windows.Forms.Button button11;
     }
 }
 

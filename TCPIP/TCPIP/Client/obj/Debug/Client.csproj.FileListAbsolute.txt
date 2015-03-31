@@ -13,3 +13,12 @@ X:\GAME\Tohme Tony\TCPIP\TCPIP\Client\obj\Debug\Client.Properties.Resources.reso
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Client\bin\Debug\Client.exe.config
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\bin\Debug\Client.exe.config
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.pdb
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\bin\Debug\Client.exe
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\bin\Debug\Client.pdb
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.ClientForm.resources
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Client\obj\Debug\Client.exe

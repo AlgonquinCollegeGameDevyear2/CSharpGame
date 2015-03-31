@@ -16,3 +16,12 @@ X:\GAME\Tohme Tony\TCPIP\TCPIP\Server\obj\Debug\Server.csproj.GenerateResource.C
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Server\obj\Debug\Server.exe
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Server\obj\Debug\Server.pdb
 X:\GAME\Tohme Tony\TCPIP\TCPIP\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\bin\Debug\Server.exe.config
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.exe
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.pdb
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\bin\Debug\Server.exe
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\bin\Debug\Server.pdb
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\pave0023\Desktop\New folder\trunk\TCPIP\TCPIP\Server\obj\Debug\Server.csproj.GenerateResource.Cache

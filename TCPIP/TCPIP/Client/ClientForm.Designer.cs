@@ -118,6 +118,7 @@
             this.Button1.TabIndex = 7;
             this.Button1.Text = "-";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Button2
             // 
@@ -127,6 +128,7 @@
             this.Button2.TabIndex = 8;
             this.Button2.Text = "-";
             this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button3
             // 
@@ -136,6 +138,7 @@
             this.Button3.TabIndex = 9;
             this.Button3.Text = "-";
             this.Button3.UseVisualStyleBackColor = true;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -145,6 +148,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "-";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -154,6 +158,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "-";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -163,6 +168,7 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "-";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -172,6 +178,7 @@
             this.button7.TabIndex = 13;
             this.button7.Text = "-";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -181,6 +188,7 @@
             this.button8.TabIndex = 14;
             this.button8.Text = "-";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -190,6 +198,7 @@
             this.button9.TabIndex = 15;
             this.button9.Text = "-";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // NewGameButton
             // 

@@ -27,7 +27,7 @@ namespace Server
 
         //Member variables to be used for final
         private short m_UserCount = 0;
-        private char[] m_StonePlacement = null;
+        private char[] m_StonePlacement = new char[9];
 
         public ServerForm()
         {
@@ -39,7 +39,6 @@ namespace Server
                 IPHost.AddressList[0].ToString();
 
             //Initialize for final
-            m_StonePlacement[9] = new char();
             for (int i = 0; i < 9; i++)
             {
                 m_StonePlacement[i] = '-';
@@ -142,6 +141,16 @@ namespace Server
                     client.Close();
                     Running = false;
                     continue;                       
+                }
+                else
+                {
+                    Byte[] bytes = new Byte[1024];
+
+                    foreach (Socket sockets in ListOfUsers)
+                    {
+                        NetworkStream netStream = new NetworkStream(sockets);
+                        netStream.Write(data, 0, data.GetLength(0));
+                    }
                 }
             }
         }

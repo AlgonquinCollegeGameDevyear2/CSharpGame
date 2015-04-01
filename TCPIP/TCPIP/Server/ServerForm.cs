@@ -24,6 +24,11 @@ namespace Server
         List<Thread> ListOfConnections = new List<Thread>();
         List<Socket> ListOfUsers = new List<Socket>();
 
+
+        //Member variables to be used for final
+        private short m_UserCount = 0;
+        private char[] m_StonePlacement = null;
+
         public ServerForm()
         {
             InitializeComponent();
@@ -32,6 +37,13 @@ namespace Server
 
             this.Text = "TCP/IP Server - " +
                 IPHost.AddressList[0].ToString();
+
+            //Initialize for final
+            m_StonePlacement[9] = new char();
+            for (int i = 0; i < 9; i++)
+            {
+                m_StonePlacement[i] = '-';
+            }
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -41,6 +53,7 @@ namespace Server
             ServerThread.Start();
             StartButton.Enabled = false;
         }
+
         private void ServerListener()
         {
             serverListener = new TcpListener(COMMAND_PORT);
@@ -57,6 +70,25 @@ namespace Server
                     continue;
                 //A connection is detected - Accept it
                 Socket clientConnection = serverListener.AcceptSocket();
+
+                Byte[] bytes = new Byte[1024];
+                if (m_UserCount == 0)
+                {
+                    bytes = Encoding.ASCII.GetBytes("X");//X and O are stone types
+                    m_UserCount++;
+                }
+                else if (m_UserCount == 1)
+                {
+                    bytes = Encoding.ASCII.GetBytes("O");
+                    m_UserCount++;
+                }
+                else
+                {
+                    bytes = Encoding.ASCII.GetBytes("S");//S for spectator
+                }
+                NetworkStream netStream = new NetworkStream(clientConnection);
+                netStream.Write(bytes, 0, bytes.GetLength(0));
+
                 //CHeck if conntected
                 if( clientConnection.Connected == true)
                 {   

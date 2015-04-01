@@ -23,6 +23,7 @@ namespace Client
         //Member variables for final
         private char m_Stone = ' ';
         private char[] m_StonePlacement = new char[9];
+        private bool isMyTurn = false;
 
         public ClientForm()
         {
@@ -65,6 +66,10 @@ namespace Client
                 NetStream.Read(bytes, 0, bytes.GetLength(0));
                 char[] charsFromServer = Encoding.ASCII.GetChars(bytes);
                 m_Stone = charsFromServer[0];
+                if (charsFromServer[0] == 'S')
+                {
+                    setAsSpectator();
+                }
                 //Update the connection status
                 ConnectionStatus.Text = "Connected";
                 //Create the thread to get the data from server
@@ -90,8 +95,6 @@ namespace Client
                 UPdateOnlineUsersLB(ips);
             }
         }
-
-
 
         private delegate void UpdateOnlineUsersDel(string num);
         private void UPdateOnlineUsersLB(string num)
@@ -147,15 +150,53 @@ namespace Client
                             button9.Text = DataFromServer[1];
                             button9.Enabled = false;
                             break;
+                        default:
+                            break;
                     }
+                    if (DataFromServer[2] == "true" && m_Stone == 'X')
+                    {
+                        isMyTurn = true;
+                    }
+                    else if (DataFromServer[2] == "false" && m_Stone == 'O')
+                    {
+                        isMyTurn = true;
+                    }
+                    else { }
                 }
                 catch (Exception ex)
                 {
 
                 }
+                try
+                {
+
+                    if (DataFromServer[0] == "true" && m_Stone == 'X')
+                    {
+                        isMyTurn = true;
+                    }
+                    else if (DataFromServer[0] == "false" && m_Stone == 'O')
+                    {
+                        isMyTurn = true;
+                    }
+                    else { }
+                }
+                catch (Exception ex) { }
             }
         }
     
+        private void setAsSpectator()
+        {
+            Button1.Enabled = false;
+            Button2.Enabled = false;
+            Button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
+            button8.Enabled = false;
+            button9.Enabled = false;
+        }
+
         private void DisconnectButton_Click(object sender, EventArgs e)
         {
             try
@@ -179,51 +220,79 @@ namespace Client
             m_StonePlacement[position] = m_Stone;
             bytes = Encoding.ASCII.GetBytes(position.ToString() + '~' + m_Stone);
             NetStream.Write(bytes, 0, bytes.GetLength(0));
+            isMyTurn = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(0);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(0);
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(1);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(1);
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(2);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(2);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(3);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(3);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(4);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(4);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(5);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(5);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(6);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(6);
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(7);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(7);
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            sendStonePlacement(8);
+            if (isMyTurn == true)
+            {
+                sendStonePlacement(8);
+            }
         }
     }
 }

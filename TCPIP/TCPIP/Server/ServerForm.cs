@@ -28,6 +28,7 @@ namespace Server
         //Member variables to be used for final
         private short m_UserCount = 0;
         private char[] m_StonePlacement = new char[9];
+        private bool playerOnesTurn = true;
 
         public ServerForm()
         {
@@ -101,8 +102,29 @@ namespace Server
                     //Add the socket to a list of sockets
                     ListOfUsers.Add(clientConnection);
                     //Call the broadcast function
+                    AssignPlayerTurn();
                     Broadcast();
                 }
+            }
+        }
+
+        private void AssignPlayerTurn()
+        {
+            Byte[] bytes = new Byte[1024];
+            foreach (Socket sockets in ListOfUsers)
+            {
+                NetworkStream netStream = new NetworkStream(sockets);
+                if (playerOnesTurn == true)
+                {
+                    bytes = Encoding.ASCII.GetBytes("true");
+                    playerOnesTurn = false;
+                }
+                else
+                {
+                    bytes = Encoding.ASCII.GetBytes("false");
+                    playerOnesTurn = true;
+                }
+                netStream.Write(bytes, 0, bytes.GetLength(0));
             }
         }
 
@@ -145,11 +167,20 @@ namespace Server
                 else
                 {
                     Byte[] bytes = new Byte[1024];
-
+                    if (playerOnesTurn == true)
+                    {
+                        bytes = Encoding.ASCII.GetBytes(Message + "~" + "true");
+                        playerOnesTurn = false;
+                    }
+                    else
+                    {
+                        bytes = Encoding.ASCII.GetBytes(Message + "~" + "false");
+                        playerOnesTurn = true;
+                    }
                     foreach (Socket sockets in ListOfUsers)
                     {
                         NetworkStream netStream = new NetworkStream(sockets);
-                        netStream.Write(data, 0, data.GetLength(0));
+                        netStream.Write(bytes, 0, bytes.GetLength(0));
                     }
                 }
             }

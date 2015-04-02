@@ -117,14 +117,13 @@ namespace Server
                 if (playerOnesTurn == true)
                 {
                     bytes = Encoding.ASCII.GetBytes("true");
-                    playerOnesTurn = false;
                 }
                 else if (playerOnesTurn == false)
                 {
                     bytes = Encoding.ASCII.GetBytes("false");
-                    playerOnesTurn = true;
                 }
                 netStream.Write(bytes, 0, bytes.GetLength(0));
+                playerOnesTurn = false;
             }
         }
 

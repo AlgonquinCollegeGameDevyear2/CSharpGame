@@ -119,7 +119,7 @@ namespace Server
                     bytes = Encoding.ASCII.GetBytes("true");
                     playerOnesTurn = false;
                 }
-                else
+                else if (playerOnesTurn == false)
                 {
                     bytes = Encoding.ASCII.GetBytes("false");
                     playerOnesTurn = true;
@@ -172,7 +172,7 @@ namespace Server
                         bytes = Encoding.ASCII.GetBytes(Message + "~" + "true");
                         playerOnesTurn = false;
                     }
-                    else
+                    else if (playerOnesTurn == false)
                     {
                         bytes = Encoding.ASCII.GetBytes(Message + "~" + "false");
                         playerOnesTurn = true;
